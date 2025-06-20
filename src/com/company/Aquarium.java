@@ -19,21 +19,18 @@ public class    Aquarium {
 
         System.out.println("Starting Aquarium with " + maleCount + " male and " + femaleCount + " female fishes.\n");
 
-        // Add male fishes
         for (int i = 0; i < maleCount; i++) {
             Fish fish = new Fish("Male ", i + 1);
             fishes.add(fish);
             executor.submit(fish);
         }
 
-        // Add female fishes
         for (int i = 0; i < femaleCount; i++) {
             Fish fish = new Fish("Female ", i + 1);
             fishes.add(fish);
             executor.submit(fish);
         }
 
-        // Watcher Thread for mating
         new Thread(() -> {
             while (true) {
                 synchronized (lock) {

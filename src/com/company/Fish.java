@@ -32,7 +32,6 @@ public class Fish implements Runnable {
     }
 
     public boolean isAlive() {
-        // Simple way to simulate if the thread is still alive: check remaining lifeSpan
         return true;
     }
 }
