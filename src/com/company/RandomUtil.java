@@ -12,5 +12,4 @@ public class RandomUtil {
     public static int getRandom(int a, int b) {
         return random.nextInt(a, b); // [a,a+1,a+2,a+3,a+4,....b)
     }
-
 }

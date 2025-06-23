@@ -33,7 +33,7 @@ public class Fish extends Thread {
         int direction = RandomUtil.getRandom(4); // 0-up,1-right,2-bottom,3-left
         if (direction == 0 && y < Aquarium.height) { // up
             y++;
-        } else if (direction == 1 && x < Aquarium.width) {
+        } else if (direction == 1 && x < Aquarium.width) { // right
             x++;
         } else if (direction == 2 && y > 0) {
             y--;

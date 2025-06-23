@@ -19,7 +19,7 @@ public class Aquarium {
         }
     }
 
-    public static synchronized void collision(Fish current) {
+    public static synchronized void collision(Fish current){
         if (fishList.size() >= MAX_NUMBER) {
             return;
         }
