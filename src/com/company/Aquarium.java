@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Aquarium {
-    public static final int width = 5; // x axis
-    public static final int height = 5; // y axis
+    public static final int width = 5;
+    public static final int height = 5;
     public static int MAX_NUMBER = (width + 1) * (height + 1); // y axis
 
     private static List<Fish> fishList = new LinkedList<>();
@@ -19,14 +19,14 @@ public class Aquarium {
         }
     }
 
-    public static synchronized void collision(Fish current) {
+    public static synchronized void collision(Fish current){
         if (fishList.size() >= MAX_NUMBER) {
             return;
         }
         for (Fish fish : fishList) {
             if (current.crush(fish)) { //
                 Fish babyFish = FishFactory.creatFish();
-                System.out.println("Collision " + current.getName() + " + " + fish.getName() + " = " + babyFish.getName());
+                System.out.println("Collision " + current.getName() + " + " + fish.getName() + " = " + "baby fish "+babyFish.getName());
                 babyFish.start();
                 fishList.add(babyFish);
                 printStatistics();
