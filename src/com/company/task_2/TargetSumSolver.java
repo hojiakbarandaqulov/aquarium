@@ -37,7 +37,6 @@ public class TargetSumSolver {
         if (index == numbers.length) {
             return;
         }
-
         findTargetSum(numbers, target, index + 1, currentSum + numbers[index],
                 currentExpression + (currentExpression.isEmpty() ? "" : " + ") + numbers[index]);
 
